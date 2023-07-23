@@ -1,5 +1,5 @@
 /*
-C Program to check the entered number is perfect number or not
+     C Program to check the entered number is perfect number or not
 */  
 #include<stdio.h>
 
