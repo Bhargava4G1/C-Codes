@@ -1,10 +1,3 @@
-/*
-DESCRIPTION:- Program to generate positive Fibonacci numbers
-SAMPLE INPUT:- 8
-SAMPLE OUTPUT:- Enter a number: 8
-				        0 1 1 2 3 5 8
- */
-
 #include<stdio.h>
 int main()
 {
