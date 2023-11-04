@@ -1,0 +1,10 @@
+Since the 'else' part in 'if-else' statement is optional, it is possible that in the nested 'if-else' statements an 'else' is omitted. In this case confusion may arise in associating 'else' part with the appropriate 'if' part.
+Example:
+	if(num > 5)
+		if(num < 10)
+			printf("Num is greater than 5 and less than 10");
+	else
+		printf("Enter number between 5 and 10");
+
+The indentations and the printf statements suggest that we want to match the 'else' with the first 'if'. But remember the indentations are only for the readers of the program and not for the compiler. The compiler will always associate the 'else' part with closest unmatched 'if' part. So in this case the 'else' part is matched with the second 'if' which is 'if(num < 10)'.
+
