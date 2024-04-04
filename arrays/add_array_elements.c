@@ -1,3 +1,7 @@
+/*
+*   Program to add elements of an array
+*/
+
 #include<stdio.h>
 
 int main()

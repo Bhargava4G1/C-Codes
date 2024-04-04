@@ -1,3 +1,7 @@
+/*
+*   Program to create an array
+*/
+
 #include <stdio.h>
 
 #define size  5
