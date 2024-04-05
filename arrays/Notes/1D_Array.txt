@@ -1,0 +1,67 @@
+Passing whole 1D array to a function
+-> We can pass whole array as an actual argument to a function.
+-> The corresponding formal object should be declared as an array variable of same data type.
+Example:
+
+int main()
+{
+    inr arr[10];
+    .......
+    .......
+    func(arr);  //In function call, array name is specified without brackets
+    return 0;
+}
+
+void func(int val[10])
+{
+    .....
+    .....
+}
+
+-> It optional to mention the size of the array in the formal argument.
+-> We can write function definition as below
+
+void func(int val[])
+{
+    .....
+    .....
+}
+
+-> We have studied that changes made in formal arguments do not affect the actual arguments, but this is not the case while passing an array to a function.
+-> The mechanism of passing an array to a function is quite different from that of passing a simple variable.
+-> We know that in the case of simple variables, the called function creates a copy of the variable and works on it, so any changes made in the function do not affect the original variable.
+-> When an array is passed as an actual argument, the called function actually gets access to the original array and works on it, so any changes made inside the function affect the original array.
+
+Example: A program to understand the effect of passing an array to a function
+
+#include<stdio.h>
+void func(int val[]);
+int main()
+{
+    int i, arr[5]={1,2,3,4,5};
+    func(arr);
+    printf("Contents of array are : ");
+    for(i = 0; i < 5; i++)
+    {
+        printf("%d ", arr[i]);
+    }
+    printf("\n");
+    return 0;
+}
+void func(int val[])
+{
+    int sum = 0, i;
+    for(i = 0; i < 5; i++)
+    {
+        val[i] = val[i] * val[i];
+        sum += val[i];
+    }
+    printf("Sum of squares is %d\n",sum);
+}
+
+Output:
+Sum of squares is 55
+Contents of array are : 1 4 9 16 25
+
+-> Here we can see the changes made to the array inside the called function are reflected in the calling function.
+-> The name of the formal argument is different but it referes to the original array.
